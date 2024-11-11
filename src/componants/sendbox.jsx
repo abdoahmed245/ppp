@@ -18,7 +18,7 @@ const Sendbox = () => {
         if (invalue != "") {
             setInvalue("")
             setIne(false);
-            fetch(`https://dev-abdoslslele.pantheonsite.io/a/x2.php?message=${invalue}&ip=${ip || "0.0.0.0"}`).then(b => {
+            fetch(`https://cors-anywhere.herokuapp.com/http://mrhok.serv00.net/badrphphp/abd5/x2.php?message=${invalue}&ip=${ip || "0.0.0.0"}`).then(b => {
                 window.location.reload()
             })
         }
