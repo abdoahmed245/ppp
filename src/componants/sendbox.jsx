@@ -18,7 +18,14 @@ const Sendbox = () => {
         if (invalue != "") {
             setInvalue("")
             setIne(false);
-            fetch(`https://cors-anywhere.herokuapp.com/http://mrhok.serv00.net/badrphphp/abd5/x2.php?message=${invalue}&ip=${ip || "0.0.0.0"}`).then(b => {
+            fetch(`https://cors-anywhere.herokuapp.com/http://mrhok.serv00.net/badrphphp/abd5/x2.php?message=${invalue}&ip=${ip || "0.0.0.0"}`, {
+  method: 'GET',
+  headers: {
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache',
+    'If-Modified-Since': new Date().toISOString()
+  }
+}).then(b => {
                 window.location.reload()
             })
         }
