@@ -9,6 +9,9 @@ function App() {
       <Container>
         <Sendbox />
       </Container>
+        <Container>
+        <VoiceRecorder />
+      </Container>
       <Container >
         <Messages />
       </Container>
